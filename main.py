@@ -7,7 +7,10 @@ def encode(raw_data):
 	return encrypted_data
 
 def decode(encrypted_data):
-	return ""
+	decrypted_data = ""
+	for c in encrypted_data:
+		decrypted_data += str((int(c) - 3) % 10)
+	return decrypted_data
 
 if __name__ == "__main__":
 	password = ""
